@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>강의 의뢰 접수 | 119복지인권연구소 · ONEBLOCKAI연구소</title>
+<meta name="description" content="119복지인권연구소 · ONEBLOCKAI연구소 이대영 강사의 AI 실무 교육 강의 의뢰 접수 페이지입니다. 사회복지·돌봄·공공기관 대상 맞춤형 AI 교육을 신청하세요." />
+<meta name="theme-color" content="#0f766e" />
+<meta name="robots" content="index,follow" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='26' font-weight='700' fill='%23fff' text-anchor='middle'%3E119%3C/text%3E%3C/svg%3E" />
+<style>
+  :root {
+    --ink: #0f172a;
+    --ink-soft: #334155;
+    --muted: #5b6b7c;
+    --line: #e3e9ef;
+    --line-strong: #cbd5e1;
+    --bg: #f4f7f9;
+    --card: #ffffff;
+    --brand: #0f766e;
+    --brand-dark: #0b5a54;
+    --brand-soft: #e6f4f1;
+    --accent: #b45309;
+    --accent-soft: #fef6e7;
+    --danger: #b91c1c;
+    --danger-soft: #fdecec;
+    --success: #0f766e;
+    --radius: 16px;
+    --shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 12px 32px -18px rgba(15, 23, 42, .28);
+    --font: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    font-family: var(--font);
+    color: var(--ink);
+    background:
+      radial-gradient(1100px 460px at 12% -8%, #d9eeea 0%, rgba(217, 238, 234, 0) 62%),
+      radial-gradient(900px 420px at 100% 0%, #e8eefb 0%, rgba(232, 238, 251, 0) 60%),
+      var(--bg);
+    line-height: 1.6;
+    font-size: 16px;
+    word-break: keep-all;
+  }
+
+  a { color: var(--brand-dark); }
+
+  .wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+  /* ── 헤더 ───────────────────────────────── */
+  header.site {
+    padding: 22px 0 6px;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-mark {
+    width: 44px; height: 44px; border-radius: 12px; flex: 0 0 auto;
+    background: linear-gradient(160deg, #12857c 0%, #0b5a54 100%);
+    color: #fff; display: grid; place-items: center;
+    font-weight: 800; font-size: 14px; letter-spacing: -.02em;
+    box-shadow: 0 6px 16px -8px rgba(15, 118, 110, .8);
+  }
+  .brand-text { display: flex; flex-direction: column; line-height: 1.3; }
+  .brand-text strong { font-size: 15px; letter-spacing: -.01em; }
+  .brand-text span { font-size: 12.5px; color: var(--muted); }
+
+  /* ── 히어로 ─────────────────────────────── */
+  .hero { padding: 26px 0 22px; max-width: 720px; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-size: 12.5px; font-weight: 700; color: var(--brand-dark);
+    background: var(--brand-soft); border: 1px solid #c9e6e1;
+    padding: 5px 11px; border-radius: 999px;
+  }
+  .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brand); }
+  h1 { font-size: clamp(26px, 4.6vw, 38px); line-height: 1.28; margin: 14px 0 10px; letter-spacing: -.03em; }
+  h1 em { font-style: normal; color: var(--brand-dark); }
+  .lede { margin: 0; color: var(--ink-soft); font-size: 16px; }
+  .lede strong { color: var(--ink); }
+
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; padding: 0; list-style: none; }
+  .badges li {
+    font-size: 12.5px; color: var(--ink-soft); background: #fff;
+    border: 1px solid var(--line); border-radius: 999px; padding: 5px 11px;
+  }
+
+  /* ── 레이아웃 ───────────────────────────── */
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+    gap: 22px;
+    align-items: start;
+    padding-bottom: 40px;
+  }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: minmax(0, 1fr); }
+    .aside { order: 1; }
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 24px;
+  }
+  @media (max-width: 560px) {
+    .card { padding: 18px 16px; border-radius: 14px; }
+  }
+
+  .card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 18px; }
+  .card-head h2 { margin: 0; font-size: 18px; letter-spacing: -.02em; }
+  .card-head .req { font-size: 12px; color: var(--muted); }
+  .req-mark { color: var(--danger); font-weight: 700; }
+
+  /* ── 폼 ─────────────────────────────────── */
+  fieldset.step {
+    border: 0; margin: 0 0 4px; padding: 20px 0 6px;
+    border-top: 1px dashed var(--line);
+  }
+  fieldset.step:first-of-type { border-top: 0; padding-top: 0; }
+  legend {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 700; color: var(--brand-dark);
+    padding: 0; margin-bottom: 12px;
+  }
+  legend .num {
+    width: 20px; height: 20px; border-radius: 7px; flex: 0 0 auto;
+    background: var(--brand-soft); color: var(--brand-dark);
+    display: grid; place-items: center; font-size: 11.5px;
+  }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid .span-2 { grid-column: 1 / -1; }
+  @media (max-width: 640px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+
+  .field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .field > label, .field-label {
+    font-size: 13.5px; font-weight: 600; color: var(--ink-soft);
+    display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  }
+  .optional { font-weight: 500; font-size: 11.5px; color: var(--muted); }
+
+  input[type="text"], input[type="tel"], input[type="email"], input[type="date"],
+  input[type="number"], select, textarea {
+    width: 100%;
+    font: inherit;
+    font-size: 15px;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid var(--line-strong);
+    border-radius: 10px;
+    padding: 11px 12px;
+    transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+    min-height: 46px;
+  }
+  textarea { resize: vertical; min-height: 104px; line-height: 1.55; }
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%235b6b7c' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+    padding-right: 36px;
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--brand);
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, .14);
+  }
+  input::placeholder, textarea::placeholder { color: #97a3b1; }
+  input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="true"] {
+    border-color: var(--danger);
+    background: #fffafa;
+  }
+  input[aria-invalid="true"]:focus, select[aria-invalid="true"]:focus, textarea[aria-invalid="true"]:focus {
+    box-shadow: 0 0 0 3px rgba(185, 28, 28, .12);
+  }
+
+  .hint { font-size: 12px; color: var(--muted); margin: 0; }
+  .error {
+    font-size: 12.5px; color: var(--danger); font-weight: 600;
+    margin: 0; display: none;
+  }
+  .error.show { display: block; }
+  .counter { font-size: 11.5px; color: var(--muted); align-self: flex-end; margin: -2px 0 0; }
+
+  /* 희망 주제 칩 */
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .chip {
+    font: inherit; font-size: 13px; font-weight: 600;
+    color: var(--ink-soft); background: #f8fafc;
+    border: 1px solid var(--line-strong); border-radius: 999px;
+    padding: 8px 13px; cursor: pointer;
+    transition: all .15s ease; text-align: left; line-height: 1.35;
+  }
+  .chip:hover { border-color: var(--brand); color: var(--brand-dark); background: #fff; }
+  .chip[aria-pressed="true"] {
+    background: var(--brand); border-color: var(--brand); color: #fff;
+    box-shadow: 0 6px 14px -10px rgba(15, 118, 110, .9);
+  }
+  .chip:focus-visible { outline: 2px solid var(--brand-dark); outline-offset: 2px; }
+
+  /* 라디오 카드 */
+  .radio-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .radio-row label {
+    flex: 1 1 120px; display: flex; align-items: center; gap: 8px;
+    font-size: 14px; color: var(--ink-soft); font-weight: 500;
+    border: 1px solid var(--line-strong); border-radius: 10px;
+    padding: 11px 12px; cursor: pointer; background: #fff;
+    transition: all .15s ease;
+  }
+  .radio-row input { accent-color: var(--brand); width: 16px; height: 16px; margin: 0; flex: 0 0 auto; }
+  .radio-row label:has(input:checked) {
+    border-color: var(--brand); background: var(--brand-soft); color: var(--brand-dark); font-weight: 700;
+  }
+  .radio-row label:has(input:focus-visible) { box-shadow: 0 0 0 3px rgba(15, 118, 110, .14); outline: none; }
+
+  /* 허니팟 — 화면에는 보이지 않지만 자동 입력 봇은 채우게 되는 필드 */
+  .hp-field {
+    position: absolute !important;
+    left: -9999px !important;
+    top: auto !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  /* 동의 */
+  .consent {
+    display: flex; gap: 10px; align-items: flex-start;
+    background: #f8fbfa; border: 1px solid var(--line);
+    border-radius: 12px; padding: 14px;
+  }
+  .consent input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--brand); flex: 0 0 auto; }
+  .consent label { font-size: 13.5px; color: var(--ink-soft); font-weight: 600; line-height: 1.5; }
+  details.privacy { margin: 10px 0 0; font-size: 12.5px; color: var(--muted); }
+  details.privacy summary { cursor: pointer; font-weight: 700; color: var(--brand-dark); }
+  details.privacy ul { margin: 8px 0 0; padding-left: 18px; }
+  details.privacy li { margin: 3px 0; }
+
+  /* 제출 */
+  .submit-area { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+  button.primary {
+    font: inherit; font-size: 16px; font-weight: 700;
+    color: #fff; background: linear-gradient(160deg, #12857c 0%, var(--brand-dark) 100%);
+    border: 0; border-radius: 12px; padding: 15px 20px; cursor: pointer;
+    box-shadow: 0 10px 24px -14px rgba(15, 118, 110, .95);
+    transition: transform .12s ease, box-shadow .15s ease, opacity .15s ease;
+    min-height: 54px;
+  }
+  button.primary:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 14px 26px -14px rgba(15, 118, 110, .95); }
+  button.primary:disabled { opacity: .62; cursor: progress; transform: none; }
+  .form-note { font-size: 12.5px; color: var(--muted); text-align: center; margin: 0; }
+
+  .alert {
+    border-radius: 12px; padding: 13px 14px; font-size: 13.5px;
+    display: none; line-height: 1.55;
+  }
+  .alert.show { display: block; }
+  .alert.error { background: var(--danger-soft); border: 1px solid #f6c9c9; color: #7f1d1d; grid-column: 1 / -1; }
+  .alert.notice { background: var(--accent-soft); border: 1px solid #f3dfb6; color: #7c4a05; }
+  .alert.error.show { display: block; }
+
+  /* ── 접수 완료 카드 ──────────────────────── */
+  .success { display: none; }
+  .success.show { display: block; }
+  .success .tick {
+    width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center;
+    background: var(--brand-soft); color: var(--brand-dark); font-size: 24px; margin-bottom: 12px;
+  }
+  .success h2 { margin: 0 0 6px; font-size: 21px; letter-spacing: -.02em; }
+  .success .receipt {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 14px; background: #f1f5f9; border: 1px dashed var(--line-strong);
+    border-radius: 8px; padding: 6px 10px; margin: 6px 0 14px;
+  }
+  .success .summary {
+    border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+    margin: 6px 0 16px;
+  }
+  .success .summary dl { margin: 0; display: grid; grid-template-columns: 1fr; }
+  .success .summary .row {
+    display: grid; grid-template-columns: 108px 1fr; gap: 10px;
+    padding: 9px 13px; border-top: 1px solid var(--line); font-size: 13.5px;
+  }
+  .success .summary .row:first-child { border-top: 0; }
+  .success .summary dt { color: var(--muted); font-weight: 600; }
+  .success .summary dd { margin: 0; color: var(--ink); overflow-wrap: anywhere; white-space: pre-wrap; }
+  @media (max-width: 520px) {
+    .success .summary .row { grid-template-columns: 1fr; gap: 2px; }
+  }
+  .success-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  button.ghost {
+    font: inherit; font-size: 14px; font-weight: 700;
+    color: var(--brand-dark); background: #fff;
+    border: 1px solid var(--brand); border-radius: 10px;
+    padding: 12px 16px; cursor: pointer; min-height: 46px;
+    transition: background .15s ease;
+  }
+  button.ghost:hover { background: var(--brand-soft); }
+  button.ghost.subtle { color: var(--ink-soft); border-color: var(--line-strong); }
+  button.ghost.subtle:hover { background: #f8fafc; }
+
+  /* ── 사이드 ─────────────────────────────── */
+  .aside { display: flex; flex-direction: column; gap: 18px; }
+  .aside .card { padding: 20px; }
+  .aside h3 { margin: 0 0 14px; font-size: 15px; letter-spacing: -.01em; }
+  .steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+  .steps li { display: flex; gap: 12px; }
+  .steps .n {
+    width: 26px; height: 26px; border-radius: 999px; flex: 0 0 auto;
+    background: var(--brand-soft); color: var(--brand-dark);
+    display: grid; place-items: center; font-size: 12px; font-weight: 800;
+  }
+  .steps strong { display: block; font-size: 13.5px; }
+  .steps p { margin: 2px 0 0; font-size: 12.5px; color: var(--muted); }
+
+  .topics-note { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .topics-note li {
+    font-size: 13px; color: var(--ink-soft);
+    padding-left: 16px; position: relative;
+  }
+  .topics-note li::before {
+    content: ""; position: absolute; left: 0; top: 8px;
+    width: 6px; height: 6px; border-radius: 2px; background: var(--brand);
+    opacity: .65;
+  }
+  .aside .profile { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; }
+  .aside .profile .who strong { display: block; font-size: 14.5px; }
+  .aside .profile .who span { font-size: 12.5px; color: var(--muted); }
+  .aside .org { font-size: 12.5px; color: var(--muted); line-height: 1.6; margin: 0; }
+  .aside .love { font-size: 12.5px; color: var(--ink-soft); margin: 10px 0 0; background: #f8fafc; border-radius: 10px; padding: 10px 12px; }
+
+  footer.site {
+    border-top: 1px solid var(--line);
+    padding: 22px 0 34px; font-size: 12.5px; color: var(--muted);
+  }
+  footer.site .wrap { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; align-items: center; }
+  footer.site strong { color: var(--ink-soft); }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">119</div>
+      <div class="brand-text">
+        <strong>119복지인권연구소 · ONEBLOCKAI연구소</strong>
+        <span>사회복지 · 돌봄 · 공공기관 AI 실무 교육</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <span class="eyebrow"><span class="dot" aria-hidden="true"></span>강의 의뢰 접수</span>
+    <h1>현장에 바로 쓰는 AI 교육,<br /><em>기관에 맞춰</em> 준비합니다</h1>
+    <p class="lede">
+      사회복지·돌봄·공공기관 실무자를 위한 <strong>생성형 AI 활용 교육</strong>을 진행합니다.
+      아래 내용을 남겨 주시면 확인 후 <strong>2영업일 안에</strong> 일정과 세부 내용을 회신드립니다.
+    </p>
+    <ul class="badges">
+      <li>전국 출강 (대면·Zoom·혼합)</li>
+      <li>실습 중심 · 기관 업무에 맞춘 교안</li>
+      <li>개인정보·보안 수칙 포함</li>
+    </ul>
+  </section>
+
+  <div class="layout">
+    <!-- ── 신청 폼 ───────────────────────── -->
+    <section class="card" id="formSection" aria-labelledby="formTitle">
+      <div class="card-head">
+        <h2 id="formTitle">강의 의뢰서 작성</h2>
+        <span class="req"><span class="req-mark">*</span> 표시는 필수</span>
+      </div>
+
+      <form id="lectureForm" novalidate autocomplete="on">
+        <div class="alert error" id="formAlert" role="alert" aria-live="assertive"></div>
+
+        <fieldset class="step">
+          <legend><span class="num" aria-hidden="true">1</span>기관 정보</legend>
+          <div class="grid">
+            <div class="field span-2">
+              <label for="orgName">기관명 <span class="req-mark" aria-hidden="true">*</span></label>
+              <input type="text" id="orgName" name="orgName" maxlength="100" required
+                     placeholder="예) ○○종합사회복지관" autocomplete="organization"
+                     aria-describedby="err-orgName" />
+              <p class="error" id="err-orgName"></p>
+            </div>
+
+            <div class="field">
+              <label for="contactName">담당자 성함 <span class="req-mark" aria-hidden="true">*</span></label>
+              <input type="text" id="contactName" name="contactName" maxlength="50" required
+                     placeholder="예) 김복지" autocomplete="name"
+                     aria-describedby="err-contactName" />
+              <p class="error" id="err-contactName"></p>
+            </div>
+
+            <div class="field">
+              <label for="phone">연락처 <span class="req-mark" aria-hidden="true">*</span></label>
+              <input type="tel" id="phone" name="phone" maxlength="30" required
+                     placeholder="010-0000-0000" autocomplete="tel" inputmode="tel"
+                     aria-describedby="err-phone hint-phone" />
+              <p class="hint" id="hint-phone">휴대폰 또는 유선 (연락 가능한 번호)</p>
+              <p class="error" id="err-phone"></p>
+            </div>
+
+            <div class="field span-2">
+              <label for="email">이메일 <span class="req-mark" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" maxlength="254" required
+                     placeholder="name@example.com" autocomplete="email" inputmode="email"
+                     aria-describedby="err-email" />
+              <p class="error" id="err-email"></p>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="step">
+          <legend><span class="num" aria-hidden="true">2</span>강의 정보</legend>
+          <div class="grid">
+            <div class="field">
+              <label for="preferredDate">희망 날짜 <span class="optional">(선택)</span></label>
+              <input type="date" id="preferredDate" name="preferredDate"
+                     aria-describedby="err-preferredDate hint-date" />
+              <p class="hint" id="hint-date">오늘 이후 날짜 · 미정이면 비워 두셔도 됩니다</p>
+              <p class="error" id="err-preferredDate"></p>
+            </div>
+
+            <div class="field">
+              <label for="preferredTime">희망 시간대 <span class="optional">(선택)</span></label>
+              <select id="preferredTime" name="preferredTime">
+                <option value="">선택해 주세요</option>
+                <option value="오전 (09:00~12:00)">오전 (09:00~12:00)</option>
+                <option value="오후 (13:00~18:00)">오후 (13:00~18:00)</option>
+                <option value="저녁 (19:00~21:00)">저녁 (19:00~21:00)</option>
+                <option value="협의 후 결정">협의 후 결정</option>
+              </select>
+            </div>
+
+            <div class="field span-2">
+              <span class="field-label" id="methodLabel">진행 방식 <span class="optional">(선택)</span></span>
+              <div class="radio-row" role="radiogroup" aria-labelledby="methodLabel">
+                <label><input type="radio" name="method" value="대면" />대면</label>
+                <label><input type="radio" name="method" value="Zoom 온라인" />Zoom 온라인</label>
+                <label><input type="radio" name="method" value="혼합 (대면+온라인)" />혼합</label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="audience">교육 대상 <span class="optional">(선택)</span></label>
+              <select id="audience" name="audience">
+                <option value="">선택해 주세요</option>
+                <option value="사회복지사">사회복지사</option>
+                <option value="요양·돌봄 실무자">요양·돌봄 실무자</option>
+                <option value="장애인활동지원">장애인활동지원</option>
+                <option value="공공기관·지자체">공공기관·지자체</option>
+                <option value="기타">기타</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="audienceEtc">교육 대상 상세 <span class="optional">(기타 선택 시)</span></label>
+              <input type="text" id="audienceEtc" name="audienceEtc" maxlength="100"
+                     placeholder="예) 지역아동센터 실무자" />
+            </div>
+
+            <div class="field">
+              <label for="headcount">예상 인원 <span class="optional">(선택)</span></label>
+              <input type="number" id="headcount" name="headcount" min="1" max="1000" step="1"
+                     placeholder="예) 30" inputmode="numeric"
+                     aria-describedby="err-headcount" />
+              <p class="error" id="err-headcount"></p>
+            </div>
+
+            <div class="field">
+              <label for="duration">교육 시간 <span class="optional">(선택)</span></label>
+              <select id="duration" name="duration">
+                <option value="">선택해 주세요</option>
+                <option value="90분">90분</option>
+                <option value="2시간">2시간</option>
+                <option value="3시간">3시간</option>
+                <option value="협의">협의</option>
+              </select>
+            </div>
+
+            <div class="field span-2">
+              <label for="budget">예산 · 강사료 기준 <span class="optional">(선택)</span></label>
+              <input type="text" id="budget" name="budget" maxlength="100"
+                     placeholder="예) 기관 기준 1회 60만원 / 미정" />
+              <p class="hint">기관 내부 기준이 있으면 알려 주세요. 조율 가능합니다.</p>
+            </div>
+
+            <div class="field span-2">
+              <label for="topic">희망 강의 주제 <span class="optional">(선택 · 아래 버튼을 누르면 자동 입력)</span></label>
+              <div class="chips" id="topicChips" role="group" aria-label="대표 강의 분야 빠른 선택">
+                <button type="button" class="chip" data-topic="AI가 바꾸는 사회복지와 인권" aria-pressed="false">AI가 바꾸는 사회복지와 인권</button>
+                <button type="button" class="chip" data-topic="실무자 생성형 AI 문서·서식 자동화" aria-pressed="false">실무자 생성형 AI 문서·서식 자동화</button>
+                <button type="button" class="chip" data-topic="개인정보·AI 보안 실천 특강" aria-pressed="false">개인정보·AI 보안 실천 특강</button>
+                <button type="button" class="chip" data-topic="노코드 AI 웹도구·업무 자동화" aria-pressed="false">노코드 AI 웹도구·업무 자동화</button>
+              </div>
+              <textarea id="topic" name="topic" maxlength="200" rows="2"
+                        placeholder="희망 주제나 교육 목표를 자유롭게 적어 주세요"></textarea>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="step">
+          <legend><span class="num" aria-hidden="true">3</span>요청 사항</legend>
+          <div class="grid">
+            <div class="field span-2">
+              <label for="message">요청사항 및 특이사항 <span class="optional">(선택)</span></label>
+              <textarea id="message" name="message" maxlength="2000" rows="5"
+                        placeholder="예) 노트북 지참 여부, 교육장 환경, 사전에 다뤘으면 하는 업무 사례, 강의 후 만족도 조사 요청 등"
+                        aria-describedby="count-message"></textarea>
+              <p class="counter" id="count-message">0 / 2000자</p>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="step">
+          <legend><span class="num" aria-hidden="true">4</span>개인정보 수집·이용 동의</legend>
+
+          <!-- 허니팟: 화면에 보이지 않는 필드. 자동 입력 봇이 채우면 접수되지 않습니다. -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="website">홈페이지 주소 (입력하지 마세요)</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="consent">
+            <input type="checkbox" id="consent" name="consent" required aria-describedby="err-consent" />
+            <label for="consent">
+              개인정보 수집·이용에 동의합니다. <span class="req-mark" aria-hidden="true">*</span>
+              <details class="privacy">
+                <summary>수집 항목과 이용 목적 보기</summary>
+                <ul>
+                  <li><strong>수집 항목</strong>: 기관명, 담당자 성함, 연락처, 이메일, 강의 희망 조건(날짜·시간·대상·인원·주제·요청사항)</li>
+                  <li><strong>이용 목적</strong>: 강의 의뢰 확인, 일정·내용 협의를 위한 연락, 강의 준비 및 사후 안내</li>
+                  <li><strong>보유 기간</strong>: 강의 종료 후 1년 (이후 파기). 단, 관련 법령에 따라 보존이 필요한 경우 해당 기간</li>
+                  <li><strong>동의 거부 권리</strong>: 동의하지 않으실 수 있으나, 이 경우 접수가 되지 않습니다.</li>
+                </ul>
+              </details>
+            </label>
+          </div>
+          <p class="error" id="err-consent" role="alert"></p>
+        </fieldset>
+
+        <div class="submit-area">
+          <button type="submit" class="primary" id="submitBtn">강의 의뢰 접수하기</button>
+          <p class="form-note">접수 내용은 담당자 확인 후 회신드립니다. 급한 일정은 접수 후 연락 주세요.</p>
+        </div>
+      </form>
+    </section>
+
+    <!-- ── 접수 완료 카드 ─────────────────── -->
+    <section class="card success" id="successSection" aria-labelledby="successTitle" tabindex="-1">
+      <div class="tick" aria-hidden="true">✓</div>
+      <h2 id="successTitle">강의 의뢰가 접수되었습니다</h2>
+      <p class="hint" id="successLead">아래 접수 내용을 확인해 주세요. 확인 후 2영업일 안에 회신드립니다.</p>
+      <div class="receipt" id="receiptNo">접수번호</div>
+      <div class="alert notice" id="demoNotice" role="status"></div>
+      <div class="summary" id="summaryBox">
+        <dl id="summaryList"></dl>
+      </div>
+      <div class="success-actions">
+        <button type="button" class="ghost" id="copyBtn">의뢰 내용 복사</button>
+        <button type="button" class="ghost subtle" id="againBtn">새 의뢰 작성</button>
+      </div>
+      <p class="hint" id="copyStatus" role="status" aria-live="polite" style="margin-top:10px;"></p>
+    </section>
+
+    <!-- ── 사이드 안내 ────────────────────── -->
+    <aside class="aside">
+      <div class="card">
+        <h3>진행 절차</h3>
+        <ol class="steps">
+          <li>
+            <span class="n" aria-hidden="true">1</span>
+            <div><strong>의뢰서 접수</strong><p>아래 양식으로 필요하신 내용을 남겨 주세요.</p></div>
+          </li>
+          <li>
+            <span class="n" aria-hidden="true">2</span>
+            <div><strong>일정·내용 협의</strong><p>2영업일 내 연락드려 교육 목표와 환경을 확인합니다.</p></div>
+          </li>
+          <li>
+            <span class="n" aria-hidden="true">3</span>
+            <div><strong>교안 준비</strong><p>기관 업무·대상에 맞춘 실습 교안과 자료를 준비합니다.</p></div>
+          </li>
+          <li>
+            <span class="n" aria-hidden="true">4</span>
+            <div><strong>강의 진행</strong><p>대면·Zoom·혼합 모두 가능하며, 실습 중심으로 진행합니다.</p></div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <div class="profile">
+          <div class="brand-mark" aria-hidden="true">119</div>
+          <div class="who">
+            <strong>이대영</strong>
+            <span>119복지인권연구소 소장 · AI 실무 강사</span>
+          </div>
+        </div>
+        <p class="org">
+          119복지인권연구소 · ONEBLOCKAI연구소<br />
+          전국 사회복지사협회 · 복지관 · 공공기관 출강
+        </p>
+        <p class="love">"AI는 어려운 기술이 아니라, 선생님의 퇴근 시간을 지켜 주는 도구입니다."</p>
+      </div>
+
+      <div class="card">
+        <h3>대표 강의 분야</h3>
+        <ul class="topics-note">
+          <li>AI가 바꾸는 사회복지와 인권</li>
+          <li>실무자 생성형 AI 문서·서식 자동화</li>
+          <li>개인정보·AI 보안 실천 특강</li>
+          <li>노코드 AI 웹도구·업무 자동화</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="site">
+    <div class="wrap" style="padding:0;">
+      <span><strong>119복지인권연구소 · ONEBLOCKAI연구소</strong> · 대표 강사 이대영</span>
+      <span>개인정보는 강의 의뢰 확인 목적으로만 사용됩니다.</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var form = document.getElementById('lectureForm');
+  var formSection = document.getElementById('formSection');
+  var successSection = document.getElementById('successSection');
+  var formAlert = document.getElementById('formAlert');
+  var submitBtn = document.getElementById('submitBtn');
+  var dateInput = document.getElementById('preferredDate');
+  var topicInput = document.getElementById('topic');
+  var messageInput = document.getElementById('message');
+  var countMessage = document.getElementById('count-message');
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var previousPayload = null;
+  var lastResult = null;
+  var submitting = false;
+
+  var FIELD_LABELS = {
+    orgName: '기관명',
+    contactName: '담당자 성함',
+    phone: '연락처',
+    email: '이메일',
+    preferredDate: '희망 날짜',
+    preferredTime: '희망 시간대',
+    method: '진행 방식',
+    audience: '교육 대상',
+    headcount: '예상 인원',
+    duration: '교육 시간',
+    budget: '예산·강사료 기준',
+    topic: '희망 강의 주제',
+    message: '요청사항',
+    consent: '개인정보 수집·이용 동의'
+  };
+
+  /* ── 날짜: KST 기준 오늘 ─────────────────────────── */
+  function todayKST() {
+    var now = new Date();
+    try {
+      return new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'Asia/Seoul',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      }).format(now);
+    } catch (err) {
+      var kst = new Date(now.getTime() + 9 * 60 * 60 * 1000);
+      return kst.toISOString().slice(0, 10);
+    }
+  }
+
+  function initDate() {
+    if (!dateInput) return;
+    var today = todayKST();
+    dateInput.min = today;
+    if (!dateInput.value) dateInput.value = today;
+  }
+
+  /* ── 희망 주제 칩 ───────────────────────────────── */
+  function parseTopics(value) {
+    return String(value || '')
+      .split(',')
+      .map(function (part) { return part.trim(); })
+      .filter(Boolean);
+  }
+
+  function syncChipState() {
+    var current = parseTopics(topicInput.value);
+    chips.forEach(function (chip) {
+      var on = current.indexOf(chip.getAttribute('data-topic')) !== -1;
+      chip.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      var label = chip.getAttribute('data-topic');
+      var list = parseTopics(topicInput.value);
+      var index = list.indexOf(label);
+      if (index === -1) list.push(label);
+      else list.splice(index, 1);
+      topicInput.value = list.join(', ');
+      syncChipState();
+      clearError('topic');
+    });
+  });
+
+  /* ── 글자 수 표시 ───────────────────────────────── */
+  function updateCount() {
+    if (!messageInput || !countMessage) return;
+    countMessage.textContent = messageInput.value.length + ' / 2000자';
+  }
+
+  /* ── 오류 표시 ─────────────────────────────────── */
+  function errorEl(field) {
+    return document.getElementById('err-' + field);
+  }
+
+  function clearError(field) {
+    var el = errorEl(field);
+    if (el) { el.textContent = ''; el.classList.remove('show'); }
+    var input = form.querySelector('[name="' + field + '"]');
+    if (input && input.getAttribute('aria-invalid') === 'true') input.removeAttribute('aria-invalid');
+  }
+
+  function clearAllErrors() {
+    Object.keys(FIELD_LABELS).forEach(clearError);
+    formAlert.textContent = '';
+    formAlert.classList.remove('show');
+  }
+
+  function showError(field, message) {
+    var el = errorEl(field);
+    if (el) {
+      el.textContent = message;
+      el.classList.add('show');
+    }
+    var inputs = form.querySelectorAll('[name="' + field + '"]');
+    Array.prototype.forEach.call(inputs, function (input) {
+      if (input.type !== 'radio') input.setAttribute('aria-invalid', 'true');
+    });
+    // 라디오 그룹은 그룹 컨테이너로 스크롤하지 않고 첫 입력으로 이동
+  }
+
+  function focusField(field) {
+    var input = form.querySelector('[name="' + field + '"]');
+    if (!input) return;
+    var target = input;
+    if (field === 'consent') target = document.getElementById('consent');
+    try {
+      target.focus({ preventScroll: true });
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } catch (err) { /* 구형 브라우저 무시 */ }
+  }
+
+  function showFormAlert(message) {
+    formAlert.textContent = message;
+    formAlert.classList.add('show');
+  }
+
+  /* ── 값 읽기 ────────────────────────────────────── */
+  function radioValue(name) {
+    var checked = form.querySelector('input[name="' + name + '"]:checked');
+    return checked ? checked.value : '';
+  }
+
+  function collect() {
+    return {
+      orgName: form.orgName.value.trim(),
+      contactName: form.contactName.value.trim(),
+      phone: form.phone.value.trim(),
+      email: form.email.value.trim(),
+      preferredDate: form.preferredDate.value || '',
+      preferredTime: form.preferredTime.value || '',
+      method: radioValue('method'),
+      audience: form.audience.value || '',
+      audienceEtc: form.audienceEtc.value.trim(),
+      headcount: form.headcount.value ? String(parseInt(form.headcount.value, 10)) : '',
+      duration: form.duration.value || '',
+      budget: form.budget.value.trim(),
+      topic: form.topic.value.trim(),
+      message: form.message.value.trim(),
+      consent: form.consent.checked,
+      website: document.getElementById('website').value
+    };
+  }
+
+  /* 고객 화면용 검증 (서버에서 한 번 더 검사합니다) */
+  function validateClient(payload) {
+    var errors = {};
+    if (!payload.orgName) errors.orgName = '기관명을 입력해 주세요.';
+    else if (payload.orgName.length > 100) errors.orgName = '기관명은 100자까지 입력할 수 있습니다.';
+
+    if (!payload.contactName) errors.contactName = '담당자 성함을 입력해 주세요.';
+    else if (payload.contactName.length > 50) errors.contactName = '성함은 50자까지 입력할 수 있습니다.';
+
+    if (!payload.phone) errors.phone = '연락처를 입력해 주세요.';
+    else {
+      var digits = payload.phone.replace(/[^0-9]/g, '');
+      if (digits.length < 6) errors.phone = '연락처 형식을 확인해 주세요. (예: 010-1234-5678)';
+    }
+
+    if (!payload.email) errors.email = '이메일을 입력해 주세요.';
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(payload.email)) errors.email = '이메일 형식을 확인해 주세요.';
+
+    if (payload.preferredDate) {
+      if (payload.preferredDate < todayKST()) errors.preferredDate = '오늘 이후 날짜를 선택해 주세요.';
+    }
+
+    if (payload.headcount) {
+      var n = Number(payload.headcount);
+      if (!isFinite(n) || n < 1 || n > 1000) errors.headcount = '예상 인원은 1~1000명 사이로 입력해 주세요.';
+    }
+
+    if (!payload.consent) errors.consent = '개인정보 수집·이용에 동의해 주세요.';
+
+    return errors;
+  }
+
+  /* ── 결과 표시 ─────────────────────────────────── */
+  function labelText(value) {
+    return value ? String(value) : '—';
+  }
+
+  function renderSummary(payload, result) {
+    var rows = [
+      ['기관명', payload.orgName],
+      ['담당자', payload.contactName],
+      ['연락처', payload.phone],
+      ['이메일', payload.email],
+      ['희망 날짜', payload.preferredDate],
+      ['희망 시간대', payload.preferredTime],
+      ['진행 방식', payload.method],
+      ['교육 대상', payload.audience + (payload.audienceEtc ? ' · ' + payload.audienceEtc : '')],
+      ['예상 인원', payload.headcount ? payload.headcount + '명' : ''],
+      ['교육 시간', payload.duration],
+      ['예산·강사료', payload.budget],
+      ['희망 주제', payload.topic],
+      ['요청사항', payload.message],
+      ['접수 시각', result.receivedAtLabel || '']
+    ];
+    var list = document.getElementById('summaryList');
+    list.innerHTML = '';
+    rows.forEach(function (row) {
+      if (!row[1]) return;
+      var wrap = document.createElement('div');
+      wrap.className = 'row';
+      var dt = document.createElement('dt');
+      dt.textContent = row[0];
+      var dd = document.createElement('dd');
+      dd.textContent = row[1];
+      wrap.appendChild(dt);
+      wrap.appendChild(dd);
+      list.appendChild(wrap);
+    });
+  }
+
+  function buildCopyText(payload, result) {
+    var lines = [];
+    lines.push('[강의 의뢰서] 119복지인권연구소 · ONEBLOCKAI연구소');
+    lines.push('접수번호: ' + (result.receiptNo || ''));
+    if (result.receivedAtLabel) lines.push('접수 시각: ' + result.receivedAtLabel);
+    lines.push('');
+    lines.push('· 기관명: ' + labelText(payload.orgName));
+    lines.push('· 담당자: ' + labelText(payload.contactName));
+    lines.push('· 연락처: ' + labelText(payload.phone));
+    lines.push('· 이메일: ' + labelText(payload.email));
+    lines.push('· 희망 날짜: ' + labelText(payload.preferredDate));
+    lines.push('· 희망 시간대: ' + labelText(payload.preferredTime));
+    lines.push('· 진행 방식: ' + labelText(payload.method));
+    lines.push('· 교육 대상: ' + labelText(payload.audience + (payload.audienceEtc ? ' · ' + payload.audienceEtc : '')));
+    lines.push('· 예상 인원: ' + (payload.headcount ? payload.headcount + '명' : '—'));
+    lines.push('· 교육 시간: ' + labelText(payload.duration));
+    lines.push('· 예산·강사료: ' + labelText(payload.budget));
+    lines.push('· 희망 주제: ' + labelText(payload.topic));
+    lines.push('· 요청사항: ' + labelText(payload.message));
+    return lines.join('\n');
+  }
+
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).then(function () { return true; });
+    }
+    return new Promise(function (resolve, reject) {
+      try {
+        var area = document.createElement('textarea');
+        area.value = text;
+        area.setAttribute('readonly', '');
+        area.style.position = 'fixed';
+        area.style.top = '-1000px';
+        document.body.appendChild(area);
+        area.select();
+        var ok = document.execCommand('copy');
+        document.body.removeChild(area);
+        resolve(ok);
+      } catch (err) { reject(err); }
+    });
+  }
+
+  function showSuccess(payload, result) {
+    document.getElementById('receiptNo').textContent = '접수번호 ' + (result.receiptNo || '-');
+    renderSummary(payload, result);
+
+    var demo = document.getElementById('demoNotice');
+    if (result.mode === 'demo' && result.notice) {
+      demo.textContent = result.notice;
+      demo.classList.add('show');
+      document.getElementById('successLead').textContent =
+        '아래 접수 내용을 복사해 담당자에게 전달해 주세요.';
+    } else {
+      demo.textContent = '';
+      demo.classList.remove('show');
+    }
+
+    formSection.style.display = 'none';
+    successSection.classList.add('show');
+    try {
+      successSection.focus({ preventScroll: true });
+      successSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } catch (err) { /* ignore */ }
+  }
+
+  function resetToForm() {
+    successSection.classList.remove('show');
+    formSection.style.display = '';
+    form.reset();
+    chips.forEach(function (chip) { chip.setAttribute('aria-pressed', 'false'); });
+    initDate();
+    updateCount();
+    document.getElementById('copyStatus').textContent = '';
+    try { formSection.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (err) { /* ignore */ }
+  }
+
+  /* ── 제출 ──────────────────────────────────────── */
+  function handleSubmit(event) {
+    event.preventDefault();
+    if (submitting) return;
+
+    clearAllErrors();
+    var payload = collect();
+    var errors = validateClient(payload);
+    var keys = Object.keys(errors);
+    if (keys.length) {
+      keys.forEach(function (field) { showError(field, errors[field]); });
+      showFormAlert('입력하지 않았거나 형식이 맞지 않는 항목이 ' + keys.length + '개 있습니다. 표시된 곳을 확인해 주세요.');
+      focusField(keys[0]);
+      return;
+    }
+
+    submitting = true;
+    submitBtn.disabled = true;
+    var originalLabel = submitBtn.textContent;
+    submitBtn.textContent = '접수 중…';
+
+    fetch('/api/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+      .then(function (response) {
+        return response.json().catch(function () { return {}; }).then(function (body) {
+          return { status: response.status, body: body };
+        });
+      })
+      .then(function (res) {
+        var body = res.body || {};
+        if (res.status === 200 && body.ok) {
+          previousPayload = payload;
+          lastResult = body;
+          showSuccess(payload, body);
+          return;
+        }
+
+        if (body.errors) {
+          Object.keys(body.errors).forEach(function (field) {
+            showError(field, body.errors[field]);
+          });
+          var first = Object.keys(body.errors)[0];
+          showFormAlert(body.message || '입력 내용을 확인해 주세요.');
+          if (first) focusField(first);
+          return;
+        }
+
+        showFormAlert(
+          body.message ||
+          (res.status === 429
+            ? '잠시 후 다시 시도해 주세요.'
+            : '접수 중 문제가 생겼습니다. 잠시 후 다시 시도하시거나 담당자에게 연락해 주세요.')
+        );
+      })
+      .catch(function () {
+        showFormAlert('네트워크 연결을 확인한 뒤 다시 시도해 주세요.');
+      })
+      .then(function () {
+        submitting = false;
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      });
+  }
+
+  /* ── 이벤트 연결 ───────────────────────────────── */
+  form.addEventListener('submit', handleSubmit);
+  form.addEventListener('input', function (event) {
+    var name = event.target && event.target.name;
+    if (name && errorEl(name)) clearError(name);
+    if (event.target === messageInput) updateCount();
+  });
+  form.addEventListener('change', function (event) {
+    var name = event.target && event.target.name;
+    if (name && name !== 'website' && errorEl(name)) clearError(name);
+  });
+
+  document.getElementById('copyBtn').addEventListener('click', function () {
+    if (!previousPayload) return;
+    var status = document.getElementById('copyStatus');
+    var text = buildCopyText(previousPayload, lastResult || {});
+    copyText(text).then(function (ok) {
+      status.textContent = ok ? '복사되었습니다. 메신저나 메일에 붙여넣어 주세요.' : '복사하지 못했습니다. 내용을 직접 선택해 복사해 주세요.';
+    }).catch(function () {
+      status.textContent = '복사하지 못했습니다. 내용을 직접 선택해 복사해 주세요.';
+    });
+  });
+
+  document.getElementById('againBtn').addEventListener('click', resetToForm);
+
+  /* ── 초기화 ────────────────────────────────────── */
+  initDate();
+  updateCount();
+  syncChipState();
+})();
+</script>
+</body>
+</html>
