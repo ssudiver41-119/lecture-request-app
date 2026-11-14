@@ -239,7 +239,8 @@
     border-radius: 12px; padding: 14px;
   }
   .consent input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--brand); flex: 0 0 auto; }
-  .consent label { font-size: 13.5px; color: var(--ink-soft); font-weight: 600; line-height: 1.5; }
+  .consent-body { min-width: 0; }
+  .consent label { display: block; font-size: 13.5px; color: var(--ink-soft); font-weight: 600; line-height: 1.5; cursor: pointer; }
   details.privacy { margin: 10px 0 0; font-size: 12.5px; color: var(--muted); }
   details.privacy summary { cursor: pointer; font-weight: 700; color: var(--brand-dark); }
   details.privacy ul { margin: 8px 0 0; padding-left: 18px; }
@@ -543,8 +544,8 @@
 
           <div class="consent">
             <input type="checkbox" id="consent" name="consent" required aria-describedby="err-consent" />
-            <label for="consent">
-              개인정보 수집·이용에 동의합니다. <span class="req-mark" aria-hidden="true">*</span>
+            <div class="consent-body">
+              <label for="consent">개인정보 수집·이용에 동의합니다. <span class="req-mark" aria-hidden="true">*</span></label>
               <details class="privacy">
                 <summary>수집 항목과 이용 목적 보기</summary>
                 <ul>
@@ -554,7 +555,7 @@
                   <li><strong>동의 거부 권리</strong>: 동의하지 않으실 수 있으나, 이 경우 접수가 되지 않습니다.</li>
                 </ul>
               </details>
-            </label>
+            </div>
           </div>
           <p class="error" id="err-consent" role="alert"></p>
         </fieldset>
