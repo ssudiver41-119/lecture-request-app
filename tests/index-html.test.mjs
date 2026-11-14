@@ -39,14 +39,35 @@ test('소속 표기가 119복지인권연구소 · ONEBLOCKAI연구소 로 들�
   assert.ok(has('사회복지'));
 });
 
-test('대표 강의 분야 4종이 빠른 선택 칩으로 제공된다', () => {
-  const topics = [
+test('히어로 소개에 AI 교육과 함께 인권·개인정보보호법·4대 법정의무교육을 한다는 점이 드러난다', () => {
+  assert.match(html, /<strong>인권교육 · 개인정보보호법 · 4대 법정의무교육<\/strong>/);
+  assert.match(html, /4대 법정의무교육/);
+  assert.match(html, /인권교육/);
+  assert.match(html, /개인정보보호법/);
+  // 히어로 제목이 AI 교육만 언급하고 끝나지 않아야 한다
+  assert.match(html, /<h1>[\s\S]*?인권·법정의무교육[\s\S]*?<\/h1>/);
+  // 주제 배지로 4과목이 나란히 안내된다
+  ['AI 실무 교육', '인권교육', '개인정보보호법 교육', '4대 법정의무교육'].forEach((subject) => {
+    assert.ok(
+      has(`<li class="badge-subject">${subject}</li>`),
+      `주제 배지 누락: ${subject}`,
+    );
+  });
+});
+
+test('대표 강의 분야 7종이 두 묶음의 빠른 선택 칩으로 제공된다', () => {
+  const aiTopics = [
     'AI가 바꾸는 사회복지와 인권',
     '실무자 생성형 AI 문서·서식 자동화',
-    '개인정보·AI 보안 실천 특강',
     '노코드 AI 웹도구·업무 자동화',
+    '개인정보·AI 보안 실천 특강',
   ];
-  topics.forEach((topic) => {
+  const dutyTopics = [
+    '인권교육',
+    '개인정보보호법 교육',
+    '4대 법정의무교육',
+  ];
+  [...aiTopics, ...dutyTopics].forEach((topic) => {
     assert.ok(has(topic), `주제 누락: ${topic}`);
     assert.match(
       html,
@@ -54,8 +75,24 @@ test('대표 강의 분야 4종이 빠른 선택 칩으로 제공된다', () => 
       `칩 버튼 누락: ${topic}`,
     );
   });
-  assert.equal(countOccurrences('class="chip"'), 4);
-  assert.equal(countOccurrences('aria-pressed="false"'), 4);
+  assert.equal(countOccurrences('class="chip"'), 7);
+  assert.equal(countOccurrences('aria-pressed="false"'), 7);
+});
+
+test('칩은 AI 실무와 인권·법정의무교육 두 묶음으로 나뉘어 접근성 있게 묶인다', () => {
+  assert.match(html, /id="topicChips"/);
+  assert.match(html, /id="chipGroupAI"/);
+  assert.match(html, /id="chipGroupLaw"/);
+  assert.match(html, /class="chips" role="group" aria-labelledby="chipGroupAI"/);
+  assert.match(html, /class="chips" role="group" aria-labelledby="chipGroupLaw"/);
+  assert.match(html, /AI 실무 교육과 인권·개인정보보호법·4대 법정의무교육은 함께 또는 따로 요청하실 수 있습니다/);
+});
+
+test('칩을 모두 눌러도 희망 주제 200자 상한을 넘지 않는다', () => {
+  const topics = [...html.matchAll(/data-topic="([^"]+)"/g)].map((m) => m[1]);
+  assert.equal(topics.length, 7);
+  const filled = topics.join(', ');
+  assert.ok(filled.length <= 200, `칩 전체 선택 시 ${filled.length}자 (상한 200자)`);
 });
 
 test('칩을 누르면 희망 주제 입력란에 값이 들어가도록 스크립트가 연결돼 있다', () => {
@@ -107,7 +144,7 @@ test('희망 시간대·진행 방식·교육 대상·인원·교육 시간·예
     assert.ok(has(`name="method" value="${v}"`), `진행 방식 옵션 누락: ${v}`);
   });
 
-  ['사회복지사', '요양·돌봄 실무자', '장애인활동지원', '공공기관·지자체', '기타'].forEach((v) => {
+  ['사회복지사', '요양·돌봄 실무자', '장애인활동지원', '공공기관·지자체', '기관 전체 직원', '기타'].forEach((v) => {
     assert.ok(has(`<option value="${v}">`), `교육 대상 옵션 누락: ${v}`);
   });
 
