@@ -87,17 +87,18 @@ function doPost(e) {
     try {
       var folder = getFolder_();
       var sheetInfo = getSheet_(folder);
-      var doc = createDoc_(folder, payload);
-      appendRow_(sheetInfo.sheet, payload, doc.getUrl());
+      var docFile = createDoc_(folder, payload);
+      var docUrl = docFile.getUrl();
+      appendRow_(sheetInfo.sheet, payload, docUrl);
 
       return json_({
         ok: true,
         result: {
           receiptNo: payload.receiptNo || '',
-          docUrl: doc.getUrl(),
+          docUrl: docUrl,
           sheetUrl: sheetInfo.url,
           folderUrl: folder.getUrl(),
-          docName: doc.getName(),
+          docName: docFile.getName(),
         },
       });
     } finally {
@@ -376,7 +377,7 @@ function createDoc_(folder, payload) {
   var file = DriveApp.getFileById(doc.getId());
   file.moveTo(folder);
 
-  return doc;
+  return file; // Document 객체는 닫혔으므로 파일로 돌려줍니다.
 }
 
 // ── 수동 점검용 ─────────────────────────────────────────
@@ -412,8 +413,8 @@ function testWithSample() {
   };
   var folder = getFolder_();
   var sheetInfo = getSheet_(folder);
-  var doc = createDoc_(folder, sample);
-  appendRow_(sheetInfo.sheet, sample, doc.getUrl());
-  Logger.log('문서: ' + doc.getUrl());
+  var docFile = createDoc_(folder, sample);
+  appendRow_(sheetInfo.sheet, sample, docFile.getUrl());
+  Logger.log('문서: ' + docFile.getUrl());
   Logger.log('시트: ' + sheetInfo.url);
 }
